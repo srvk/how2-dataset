@@ -1,7 +1,7 @@
 # How2 Dataset
 This repository contains code and meta-data to (re-)create the *How2 dataset* as described in the following paper:
 
-Ramon Sanabria, Ozan Caglayan, Shruti Palaskar, Desmond Elliott, Loic Barrault, Lucia Specia, and Florian Metze. How2: A large-scale dataset for multimodal language understanding. In Proceedings Visually Grounded Interaction and Language (ViGIL): https://nips2018vigil.github.io/, Montreal; Canada, December 2018. Neural Information Processing Society (NeurIPS). https://arxiv.org/abs/1811.00347.
+Ramon Sanabria, Ozan Caglayan, Shruti Palaskar, Desmond Elliott, Loic Barrault, Lucia Specia, and Florian Metze. How2: A large-scale dataset for multimodal language understanding. In Proceedings [Visually Grounded Interaction and Language (ViGIL)](https://nips2018vigil.github.io), Montreal; Canada, December 2018. Neural Information Processing Society (NeurIPS). https://arxiv.org/abs/1811.00347.
 
 Please cite the following paper in all academic work that uses this dataset:
 ```
@@ -17,7 +17,7 @@ Please cite the following paper in all academic work that uses this dataset:
 
 We also acknowledge earlier work on the same data:
 
-Shoou-I Yu, Lu Jiang, and Alexander Hauptmann. Instructional Videos for Unsupervised Harvesting and Learning of Action Examples. In Proc. 22nd ACM International Conference on Multimedia; Orlando, FL; U.S.A.; 2014. ACM. http://doi.acm.org/10.1145/2647868.2654997.
+ - Shoou-I Yu, Lu Jiang, and Alexander Hauptmann. Instructional Videos for Unsupervised Harvesting and Learning of Action Examples. In Proc. 22nd ACM International Conference on Multimedia; Orlando, FL; U.S.A.; 2014. ACM. http://doi.acm.org/10.1145/2647868.2654997.
 
 ## How2 use
 The corpus consists of around 80,000 instructional videos (about 2,000 hours) with associated English sub-titles and summaries. About 300 hours have also been translated into Portuguese using crowd-sourcing, and used during the [JSALT 2018 Workshop](https://www.clsp.jhu.edu/workshops/18-workshop/grounded-sequence-sequence-transduction). A larger version will be released soon.
