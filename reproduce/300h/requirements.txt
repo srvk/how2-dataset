@@ -1,0 +1,4 @@
+webvtt-py==0.4.2
+tqdm
+requests
+youtube-dl>=2018.11.07
