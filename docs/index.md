@@ -7,7 +7,7 @@ Ramon Sanabria, Ozan Caglayan, Shruti Palaskar, Desmond Elliott, Loic Barrault, 
 ### Very Special Thanks
 To John Hopkins University for organizing such great experience as JSALT workshop, and to the amazing team: Grounded Sequence-to-Sequence Transduction!
 
-<img src="imgs/jsalt_s2s_team.gif" alt="hi" height="300" class="inline" class="center"/>
+<img src="imgs/jsalt_s2s_team.gif" alt="hi" height="300" class="center"/>
 
 
 
