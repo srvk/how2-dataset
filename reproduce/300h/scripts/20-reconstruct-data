@@ -1,0 +1,111 @@
+#!/usr/bin/env python3
+from collections import defaultdict, OrderedDict
+
+import bz2
+import sys
+import argparse
+import pickle as pkl
+from pathlib import Path
+
+import tqdm
+import webvtt
+
+
+def read_vtt_files(root, vid_ids):
+    """Returns a dictionary of video_id to transcript parsed from VTT files."""
+    d = {}
+    for vid_id in tqdm.tqdm(vid_ids, ncols=80):
+        vtt = '{}/{}.en.vtt'.format(root, vid_id)
+        try:
+            capts = webvtt.read(str(vtt))
+        except webvtt.MalformedFileError as we:
+            raise Exception('Empty VTT file {}'.format(vtt))
+        else:
+            texts = [c.text.replace('\n ', ' ').replace('\n', ' ') for c in capts]
+            d[vid_id] = ' '.join(texts).replace('  ', ' ')
+
+    return d
+
+
+def read_pos_file(fname):
+    """Returns a dictionary of segment_id to char-level transcript boundaries."""
+    with bz2.open(fname, 'rb') as f:
+        d = pkl.load(f)
+    return d
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(prog='reconstruct-data')
+
+    parser.add_argument('-o', '--output-dir', type=str, required=True,
+                        help='Output directory')
+    parser.add_argument('-s', '--sids-file', type=str, required=True,
+                        help='File containing the ordered segment IDs')
+    parser.add_argument('-v', '--vtt-folder', type=str, required=True,
+                        help='Folder containing the downloaded .vtt files')
+    parser.add_argument('-p', '--offset-file', type=str, required=True,
+                        help='Offset file (.bin.bz2) for the split.')
+    args = parser.parse_args()
+
+    args.sids_file = Path(args.sids_file)
+    split_name = args.sids_file.parent.stem
+
+    odir = Path(args.output_dir)
+    odir.mkdir(exist_ok=True, parents=True)
+
+    # Read all relevant segment indices
+    seg_ids = open(args.sids_file).read().strip().split('\n')
+    vid_ids = set(sorted([s[:11] for s in seg_ids]))
+    print('Number of segments/videos: {}/{}'.format(
+        len(seg_ids), len(vid_ids)))
+
+    # vid_id to whole transcript
+    print('Reading .vtt files...')
+    vtt_dict = read_vtt_files(args.vtt_folder, vid_ids)
+
+    print('Reading offset file...')
+    pos_dict = read_pos_file(args.offset_file)
+
+    content = {}
+    outstanding = []
+    n_direct_hits = 0
+
+    for seg_id in tqdm.tqdm(seg_ids, ncols=80):
+        vid_id = seg_id[:11]
+
+        if seg_id in pos_dict:
+            # We found the segment
+            n_direct_hits += 1
+            start, stop = pos_dict[seg_id]
+            content[seg_id] = vtt_dict[vid_id][start:stop]
+        else:
+            # Multiple segments together
+            outstanding.append(seg_id)
+
+            assert seg_id[11:].count('_') > 1, "This should not happen"
+
+    print('{} multi-sentence segments will be formed manually.'.format(
+        len(outstanding)))
+
+    # Form multi-sentence segments
+    for seg_id in outstanding:
+        vid_id = seg_id[:11]
+        # List of unitary segments to concatenate
+        segs = ['{}_{}'.format(vid_id, s) for s in seg_id[12:].split('_')]
+        text = []
+        for seg in segs:
+            start, stop = pos_dict[seg]
+            # Add segment
+            text.append(vtt_dict[vid_id][start:stop])
+
+        # Concatenate and add to the dictionary
+        content[seg_id] = ' '.join(text)
+
+    ofile = odir / 'text.en'
+    ofile_id = odir / 'text.id.en'
+    print('Dumping segments')
+    with open(ofile, 'w') as of, open(ofile_id, 'w') as of_id:
+        # Maintain original order
+        for key in seg_ids:
+            of_id.write('{} {}\n'.format(key, content[key]))
+            of.write('{}\n'.format(content[key]))

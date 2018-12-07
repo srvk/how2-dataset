@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+
+import sys
+
+if __name__ == '__main__':
+    # processes .seg file to generate a bunch of statistics
+    vids = set()
+    segs = set()
+    durs = []
+
+    for line in sys.stdin:
+        seg, vid, start, end = line.strip().split()
+        segs.add(seg)
+        vids.add(vid)
+        duration = float(end) - float(start)
+        durs.append(duration)
+
+
+    hours = sum(durs) / 3600
+    sec_per_clip = (hours * 3600) / len(durs)
+    min_clip = min(durs)
+    max_clip = max(durs)
+
+    print('{:7} sents/clips {:7} videos, {:.1f} hours, min/mean/max (sec/clip) => {:.3f}/{:.3f}/{:.3f}'.format(
+        len(segs), len(vids), hours, min_clip, sec_per_clip, max_clip))

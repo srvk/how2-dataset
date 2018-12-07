@@ -1,0 +1,44 @@
+#!/usr/bin/env python3
+import argparse
+import bz2
+
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(prog='extract-pt')
+
+    parser.add_argument('-o', '--output', type=str, required=True,
+                        help='Output filename prefix.')
+    parser.add_argument('-s', '--sids-file', type=str, required=True,
+                        help='File containing the ordered segment IDs.')
+    parser.add_argument('-p', '--pt-file', type=str, required=True,
+                        help='.pt translations file.')
+    args = parser.parse_args()
+
+    # Collect segment IDs
+    sids = []
+    with open(args.sids_file) as f:
+        for line in f:
+            sids.append(line.strip())
+
+    print('Number of total samples: {}'.format(len(sids)))
+
+    # Parse the file
+    trans = {}
+    print('Reading {} file...'.format(args.pt_file))
+    with bz2.open(args.pt_file, 'rt') as f:
+        for line in f:
+            sid, txt = line.strip().split(' ', 1)
+            trans[sid] = txt.strip()
+    print('Dumping final files...')
+
+    out_pt = open('{}.pt'.format(args.output), 'w')
+    out_id_pt = open('{}.id.pt'.format(args.output), 'w')
+
+    for sid in sids:
+        txt = trans[sid]
+        out_id_pt.write('{} {}\n'.format(sid, txt))
+        out_pt.write('{}\n'.format(txt))
+
+    out_pt.close()
+    out_id_pt.close()
