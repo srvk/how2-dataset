@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#get last version available
+
+echo "last version available is "$(curl http://islpc21.is.cs.cmu.edu/ramons/version)
+
 sha1sum="sha1sum"
 case "$OSTYPE" in
   darwin*) sha1sum="gsha1sum";;
