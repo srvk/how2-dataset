@@ -1,12 +1,9 @@
 # Reproducible Pipeline for 300h
 
-1) First, clone this repository (and *star* it if you like it ;-) to your local UNIX
-environment.
-
-2) Make sure you are working in a Python 3.x environment (preferably >= 3.6) and you
+- Make sure you are working in a Python 3.x environment (preferably >= 3.6) and you
 are able to install additional dependencies with `pip`.
 
-3) The reproducible pipeline requires the following Python packages to be available.
+- The reproducible pipeline requires the following Python packages to be available.
 You can install these packages simply by running `pip install -r requirements.txt` command
 in the root of the cloned repository.
 
@@ -17,7 +14,7 @@ in the root of the cloned repository.
  - requests
 ```
 
-4) You will also need the `sha1sum` and `parallel` utilities:
+- You will also need the `sha1sum` and `parallel` utilities:
 
 ```
 # Ubuntu (sha1sum should already be installed)
@@ -27,7 +24,7 @@ apt install parallel
 brew install coreutils parallel
 ```
 
-5) Finally, run the installation script `scripts/install.sh` from the
+- Finally, run the installation script `scripts/install.sh` from the
 **root folder** of the repository:
 
 ```
