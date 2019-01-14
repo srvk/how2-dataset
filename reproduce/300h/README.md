@@ -24,8 +24,8 @@ apt install parallel
 brew install coreutils parallel
 ```
 
-- Finally, run the installation script `scripts/install.sh` from the
-**root folder** of the repository:
+- Finally, run the installation script `scripts/install.sh` from within the
+  `reproduce/300h` folder:
 
 ```
 $ scripts/install.sh <# of parallel jobs for subtitle fetching>
