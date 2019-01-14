@@ -73,7 +73,7 @@ while [ $n_tries -lt 5 ]; do
     echo "[Attempt #$n_tries] $n_remaining subtitles to download."
     # Download Youtube videos on the list in parallel
     parallel --bar -a $video_list -j $n_jobs youtube-dl ${url_base}{} --skip-download \
-      --sub-format vtt --write-sub -o ${sub_dir}/{} --restrict-filename --quiet -w
+      --sub-format vtt --write-sub -o "${sub_dir}/%\(id\)s.%\(ext\)s" --restrict-filename --quiet -w
   else
     break
   fi
