@@ -23,7 +23,7 @@ if [[ -z $n_jobs ]]; then
 fi
 
 # Print last available version
-echo "Last available version: "$(curl http://islpc21.is.cs.cmu.edu/ramons/version)
+echo "Last available `curl -s http://islpc21.is.cs.cmu.edu/ramons/version`"
 
 # Check dependencies
 for util in youtube-dl parallel realpath $sha1sum; do
