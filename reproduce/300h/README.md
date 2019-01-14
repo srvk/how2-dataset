@@ -36,3 +36,8 @@ try to upgrade `youtube-dl` to an even more recent version before reporting the 
 
 **NOTE:** You still need to pass through the `Option 1` in order to download the
 speech and vision related features.
+
+## Fetching videos
+
+If you also want to download the video files, modify `scripts/install.sh` and
+remove the `--skip-download` argument given to `youtube-dl`.
