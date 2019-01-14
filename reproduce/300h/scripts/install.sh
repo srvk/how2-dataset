@@ -1,9 +1,5 @@
 #!/bin/bash
 
-#get last version available
-
-echo "last version available is "$(curl http://islpc21.is.cs.cmu.edu/ramons/version)
-
 sha1sum="sha1sum"
 case "$OSTYPE" in
   darwin*) sha1sum="gsha1sum";;
@@ -25,6 +21,9 @@ if [[ -z $n_jobs ]]; then
   echo "Usage: $0 <Number of parallel jobs for download>"
   exit 1
 fi
+
+# Print last available version
+echo "Last available version: "$(curl http://islpc21.is.cs.cmu.edu/ramons/version)
 
 # Check dependencies
 for util in youtube-dl parallel realpath $sha1sum; do
