@@ -11,5 +11,4 @@ To John Hopkins University for organizing such great experience as JSALT worksho
 </p>
 
 
-### The How2 Challenge: New Tasks for Vision & Language [[LINK](icml2019-challenge.md)]
-We continue to explore tasks for vision and language as a workshop at ICML 2019. Stay tuned for more information!
+
