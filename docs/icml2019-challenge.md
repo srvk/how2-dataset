@@ -8,9 +8,12 @@ At NeurIPS 2018, we released the How2 data-set, containing 85,000 (2000h) of how
 
 The workshop will be held on June 14/15th. Stay tuned for more information and updates!
 
+* * *
+
 ### Updates
 Coming soon!
 
+* * *
 
 ### Important Dates (Tentative)
 *Please note these dates are tentative and may be changed. 
@@ -19,11 +22,15 @@ Deadline for paper submission: ~May 15th
 Author Notification: ~May 22nd  
 Workshop: June 14th/15th  
 
+* * *
+
 ### Planned Activities (Tentative)
 1. A series of presentations on the How2 Challenge Tasks, based on invited papers  
 2. Posters from How2 challenge participants to encourage in-depth discussion  
 3. Invited speakers to present other viewpoints and complementary work  
 4. A moderated round table discussion to develop future directions  
+
+* * *
 
 ### Schedule (Tentative)
 |08:45 - 10:30  |   Workshop opening, Presentations on the How2 Challenge tasks |  
@@ -35,8 +42,12 @@ Workshop: June 14th/15th
 |15:45 - 16:45  |   Invited talks/ invited papers [2 slots]                     |  
 |16:45 - 18:00  |   Round table discussion/ panel discussion; Wrap-up           |  
 
+* * *
+
 ### Invited Speakers
 Coming soon!
+
+* * *
 
 ### Organizers
 [Florian Metze](http://www.cs.cmu.edu/~fmetze/interACT/Home.html)  
