@@ -33,6 +33,7 @@ Workshop: June 14th/15th
 * * *
 
 ### Schedule (Tentative)
+| Time           |   Schedule                                                    |  
 |:---------------|:--------------------------------------------------------------|  
 | 08:45 - 10:30  |   Workshop opening, Presentations on the How2 Challenge tasks |  
 | 10:30 - 11:00  |   Coffee + posters                                            |  
