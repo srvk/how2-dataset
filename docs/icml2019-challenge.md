@@ -9,10 +9,12 @@ At NeurIPS 2018, we released the How2 data-set, containing 85,000 (2000h) of how
 The workshop will be held on June 14/15th. Stay tuned for more information and updates!
 
 ### Updates
+Coming soon!
 
 
 ### Important Dates (Tentative)
-Please note these dates are tentative and may be changed. Refer to this website for more information.  
+*Please note these dates are tentative and may be changed. 
+Refer to this website for more information.*    
 Deadline for paper submission: ~May 15th
 Author Notification: ~May 22nd
 Workshop: June 14th/15th
@@ -34,6 +36,7 @@ Workshop: June 14th/15th
 4:45 - 6:00     Round table discussion/ panel discussion; Wrap-up  
 
 ### Invited Speakers
+Coming soon!
 
 ### Organizers
 [Florian Metze](http://www.cs.cmu.edu/~fmetze/interACT/Home.html)  
