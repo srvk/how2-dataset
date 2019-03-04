@@ -50,11 +50,11 @@ Coming soon!
 * * *
 
 ### Organizers
-[Florian Metze](http://www.cs.cmu.edu/~fmetze/interACT/Home.html)  
-[Lucia Specia](http://staffwww.dcs.shef.ac.uk/people/L.Specia/)  
-[Desmond Elliott](https://elliottd.github.io)  
-[Loïc Barrault](https://scholar.google.fr/citations?user=i4IBjw4AAAAJ&hl=fr&oi=ao)  
-[Ramon Sanabria](https://scholar.google.com/citations?user=hoE7_YcAAAAJ)  
-<img src="imgs/shruti.png" alt="Shruti" style="width:120px;height:120px;">[Shruti Palaskar](https://shrutijpalaskar.github.io)  
+<img src="imgs/florian.png" style="width:120px;height:120px;">[Florian Metze](http://www.cs.cmu.edu/~fmetze/interACT/Home.html)    
+<img src="imgs/lucia.png" style="width:120px;height:120px;">[Lucia Specia](http://staffwww.dcs.shef.ac.uk/people/L.Specia/)    
+<img src="imgs/des.png" style="width:120px;height:120px;">[Desmond Elliott](https://elliottd.github.io)    
+<img src="imgs/loic.jpeg" style="width:120px;height:120px;">[Loïc Barrault](https://scholar.google.fr/citations?user=i4IBjw4AAAAJ&hl=fr&oi=ao)    
+<img src="imgs/ramon.jpeg" style="width:120px;height:120px;">[Ramon Sanabria](https://scholar.google.com/citations?user=hoE7_YcAAAAJ)    
+<img src="imgs/shruti.png" style="width:120px;height:120px;">[Shruti Palaskar](https://shrutijpalaskar.github.io)  
 
 
