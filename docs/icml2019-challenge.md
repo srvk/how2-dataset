@@ -26,14 +26,14 @@ Workshop: June 14th/15th
 4. A moderated round table discussion to develop future directions  
 
 ### Schedule (Tentative)
-08:45 - 10:30     Workshop opening, Presentations on the How2 Challenge tasks  
-10:30 - 11:00     Coffee + posters  
-11:00 - 12:30     Invited talks/ invited papers [3 slots]  
-12:30 - 13:45     Lunch  
-13:45 - 14:45     Invited talks/ invited papers [2 slots]  
-14:45 - 15:45     Coffee + posters  
-15:45 - 16:45     Invited talks/ invited papers [2 slots]  
-16:45 - 18:00     Round table discussion/ panel discussion; Wrap-up  
+|08:45 - 10:30  |   Workshop opening, Presentations on the How2 Challenge tasks |  
+|10:30 - 11:00  |   Coffee + posters                                            |  
+|11:00 - 12:30  |   Invited talks/ invited papers [3 slots]                     |  
+|12:30 - 13:45  |   Lunch                                                       |  
+|13:45 - 14:45  |   Invited talks/ invited papers [2 slots]                     |  
+|14:45 - 15:45  |   Coffee + posters                                            |  
+|15:45 - 16:45  |   Invited talks/ invited papers [2 slots]                     |  
+|16:45 - 18:00  |   Round table discussion/ panel discussion; Wrap-up           |  
 
 ### Invited Speakers
 Coming soon!
