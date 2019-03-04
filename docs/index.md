@@ -4,11 +4,10 @@ In this repository, we introduce **How2**, a multimodal collection of instructio
 ### Paper [[PDF](https://arxiv.org/abs/1811.00347)]
 Ramon Sanabria, Ozan Caglayan, Shruti Palaskar, Desmond Elliott, Loic Barrault, Lucia Specia, and Florian Metze. How2: A large-scale dataset for multimodal language understanding. In Proceedings [Visually Grounded Interaction and Language (ViGIL)](https://nips2018vigil.github.io), Montreal; Canada, December 2018. Neural Information Processing Society (NeurIPS).
 
-### Special Session on Multimodal Representation Learning for Language Generation and Understanding 
-We will hold a special session on multimodal learning at ICASSP 2019 using How2 dataset and other related work. More information about the special session coming up! Here are some details about [special sessions at ICASSP 2019](https://2019.ieeeicassp.org/program#special-sessions)
+### Special Session ICASSP 2019 [[LINK](https://2019.ieeeicassp.org/program#special-sessions)] 
+We will hold a special session on Multimodal Representation Learning for Language Generation and Understanding at ICASSP 2019 using the How2 dataset and other related work. More information coming up soon! 
 
-
-### The How2 Challenge: New Tasks for Vision & Language [[LINK](icml2019-challenge.md)]
+### The How2 Challenge: New Tasks for Vision & Language ICML 2019 [[LINK](icml2019-challenge.md)]
 We continue to explore tasks for vision and language as a workshop at ICML 2019. Stay tuned for more information!
 
 ### Very Special Thanks
