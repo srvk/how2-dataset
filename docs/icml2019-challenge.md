@@ -44,7 +44,6 @@ Coming soon!
 [Desmond Elliott](https://elliottd.github.io)  
 [Loïc Barrault](https://scholar.google.fr/citations?user=i4IBjw4AAAAJ&hl=fr&oi=ao)  
 [Ramon Sanabria](https://scholar.google.com/citations?user=hoE7_YcAAAAJ)  
-<p> <img src="imgs/shruti.png" alt="Smiley face" align="left"> [Shruti Palaskar](https://shrutijpalaskar.github.io)  
-Shruti is a PhD student at the Language Technologies Institute of the School of Computer Science at Carnegie Mellon University </p>
+[Shruti Palaskar](https://shrutijpalaskar.github.io)  
 
 
