@@ -55,6 +55,6 @@ Coming soon!
 [Desmond Elliott](https://elliottd.github.io)  
 [Loïc Barrault](https://scholar.google.fr/citations?user=i4IBjw4AAAAJ&hl=fr&oi=ao)  
 [Ramon Sanabria](https://scholar.google.com/citations?user=hoE7_YcAAAAJ)  
-[Shruti Palaskar](https://shrutijpalaskar.github.io)  
+![Octocat][Shruti Palaskar](https://shrutijpalaskar.github.io)  
 
 
