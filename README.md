@@ -45,7 +45,7 @@ The results in the dataset paper can be reproduced using the [nmtpytorch](https:
 We will provide the necessary instructions and configuration files shortly.
 
 ## How2 help
-Please use the `issues` ticket system to ask questions and get clarification.
+Please use the `issues` ticket system (https://github.com/srvk/how2-dataset/issues) to ask questions and get clarification.
 
 ## How2 license
 License information for every video can be found in the `.info.json` file that is being downloaded for every video.
