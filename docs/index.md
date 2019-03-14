@@ -13,7 +13,7 @@ We will hold a special session on Multimodal Representation Learning for Languag
 
 * * *
 
-### The How2 Challenge: New Tasks for Vision & Language ICML 2019 [[LINK](icml2019-how2-theme/index.html)]
+### The How2 Challenge ICML 2019 [[LINK](icml2019-how2-theme/index.html)]
 We continue to explore tasks for vision and language as a workshop at ICML 2019. Stay tuned for more information!
 
 * * *
