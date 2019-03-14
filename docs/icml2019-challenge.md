@@ -1,3 +1,6 @@
+redirect_to:
+  - https://srvk.github.io/how2-challenge/
+
 ## The How2 Challenge: New Tasks for Vision & Language 
 
 ### Description
