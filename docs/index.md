@@ -4,7 +4,7 @@ In this repository, we introduce **How2**, a multimodal collection of instructio
 * * *
 
 ### Download Dataset
-[View the project on Github](https://github.com/srvk/how2-dataset) to know more about downloading the dataset.
+[View the project on Github](https://github.com/srvk/how2-dataset) to download the dataset.
 
 * * *
 
