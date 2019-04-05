@@ -1,6 +1,5 @@
 theme: jekyll-theme-minimal  
 description: [Repository for dataset download and baseline code for tasks based on the How2 dataset]
+
 plugins:
-    - jekyll-redirect-from
-title: How2 Dataset
-plugins: jekyll-redirect-from
+  - jekyll-redirect-from
