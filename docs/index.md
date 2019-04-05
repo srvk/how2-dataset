@@ -3,12 +3,6 @@ In this repository, we introduce **How2**, a multimodal collection of instructio
 
 * * *
 
-### Download Dataset
-[[View the project on Github](https://github.com/srvk/how2-dataset)] to download the dataset.
-
-
-* * *
-
 ### Paper [[PDF](https://arxiv.org/abs/1811.00347)]
 Ramon Sanabria, Ozan Caglayan, Shruti Palaskar, Desmond Elliott, Loic Barrault, Lucia Specia, and Florian Metze. How2: A large-scale dataset for multimodal language understanding. In Proceedings [Visually Grounded Interaction and Language (ViGIL)](https://nips2018vigil.github.io), Montreal; Canada, December 2018. Neural Information Processing Society (NeurIPS).
 
