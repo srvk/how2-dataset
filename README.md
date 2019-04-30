@@ -49,6 +49,6 @@ Please use the `issues` ticket system (https://github.com/srvk/how2-dataset/issu
 
 ## How2 license
 License information for every video can be found in the `.info.json` file that is being downloaded for every video.
-At the time of release, all videos included in this dataset were being made available by the original content providers under the Standard YouTube License.
+At the time of release, all videos included in this dataset were being made available by the original content providers under the standard [YouTube License](https://www.youtube.com/static?template=terms).
 
-The contents of this repository are being made available under the Creative Commons License (data) and/ or BSD-2 (software).
+Unless noted otherwise, we are providing the contents of this repository under the [Creative Commons BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) (Attribution-Share-Alike) License (for data-like content) and/ or [BSD-2-Clause License](https://opensource.org/licenses/BSD-2-Clause) (for software-type content).
