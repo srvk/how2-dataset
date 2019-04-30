@@ -7,7 +7,7 @@ Please cite the following paper in all academic work that uses this dataset:
 ```
 @inproceedings{sanabria18how2,
   title = {{How2:} A Large-scale Dataset For Multimodal Language Understanding},
-  author = {Sanabria, Ramon and Caglayan, Ozan  and Palaskar, Shruti and Elliott, Desmond and Barrault, Lo\"ic and Specia, Lucia and Metze, Florian},
+  author = {Sanabria, Ramon and Caglayan, Ozan and Palaskar, Shruti and Elliott, Desmond and Barrault, Lo\"ic and Specia, Lucia and Metze, Florian},
   booktitle = {Proceedings of the Workshop on Visually Grounded Interaction and Language (ViGIL)},
   year = {2018},
   organization={NeurIPS},
@@ -15,7 +15,7 @@ Please cite the following paper in all academic work that uses this dataset:
 }
 ```
 
-We also acknowledge earlier work on the same data:
+We also acknowledge earlier work (including first-time data collection) on the same data (and encourage you to do the same):
 
  - Shoou-I Yu, Lu Jiang, and Alexander Hauptmann. Instructional Videos for Unsupervised Harvesting and Learning of Action Examples. In Proc. 22nd ACM International Conference on Multimedia; Orlando, FL; U.S.A.; 2014. ACM. http://doi.acm.org/10.1145/2647868.2654997.
 
