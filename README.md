@@ -19,6 +19,10 @@ We also acknowledge earlier work (including first-time data collection) on the s
 
  - Shoou-I Yu, Lu Jiang, and Alexander Hauptmann. Instructional Videos for Unsupervised Harvesting and Learning of Action Examples. In Proc. 22nd ACM International Conference on Multimedia; Orlando, FL; U.S.A.; 2014. ACM. http://doi.acm.org/10.1145/2647868.2654997.
 
+## How2 Challenge
+
+Please also check out the [How2 Challenge Workshop at ICML 2019](https://srvk.github.io/how2-challenge/).
+
 ## How2 Download
 The corpus consists of around 80,000 instructional videos (about 2,000 hours) with associated English sub-titles and summaries. About 300 hours have also been translated into Portuguese using crowd-sourcing, and used during the [JSALT 2018 Workshop](https://www.clsp.jhu.edu/workshops/18-workshop/grounded-sequence-sequence-transduction). A larger version will be released soon.
 
