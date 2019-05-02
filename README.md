@@ -53,7 +53,7 @@ We will provide instructions on how to score our three challenge tasks here.
 
 ### ASR
 
-Use the following [scripte](eval/asr/score.py) to evaluate your ASR outputs.
+Use the following [script](eval/asr/score.py) to evaluate your ASR outputs.
 
 Dependencies:
 -  [sclite](http://www1.icsi.berkeley.edu/Speech/docs/sctk-1.2/sclite.html).
