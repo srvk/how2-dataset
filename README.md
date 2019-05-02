@@ -40,14 +40,14 @@ The aforementioned form will ask for the following informations:
 
 Proceed from [here](/reproduce/300h/README.md)
 
-## How2 run
-The results in the dataset paper can be reproduced using the [nmtpytorch](https://github.com/lium-lst/nmtpytorch).
-We will provide the necessary instructions and configuration files shortly.
+## How2 Run
+The results in the dataset paper can be reproduced using [nmtpytorch](https://github.com/lium-lst/nmtpytorch).
+We provide instructions and configuration files to reproduce three baselines on multi-modal speech-to-text, multi-modal machine translation, and multi-modal summarization.
 
-## How2 help
+## How2 Get Help
 Please use the `issues` ticket system (https://github.com/srvk/how2-dataset/issues) to ask questions and get clarification.
 
-## How2 license
+## How2 License
 License information for every video can be found in the `.info.json` file that is being downloaded for every video.
 At the time of release, all videos included in this dataset were being made available by the original content providers under the standard [YouTube License](https://www.youtube.com/static?template=terms).
 
