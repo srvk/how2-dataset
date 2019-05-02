@@ -53,9 +53,13 @@ We will provide instructions on how to score our three challenge tasks here.
 
 ### ASR
 
-Use the following script to evaluate your ASR outputs `https://github.com/srvk/how2-dataset/blob/master/eval/asr/score.py`.
+Use the following [scripte](eval/asr/score.py) to evaluate your ASR outputs.
 
-This script have [sclite](http://www1.icsi.berkeley.edu/Speech/docs/sctk-1.2/sclite.html) dependencies.
+Dependencies:
+-  [sclite](http://www1.icsi.berkeley.edu/Speech/docs/sctk-1.2/sclite.html).
+- a
+- b
+- c
 
 ### Summarization
 
