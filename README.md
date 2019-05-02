@@ -1,3 +1,7 @@
+```diff
++NEW: Please check out the [How2 Challenge Workshop at ICML 2019](https://srvk.github.io/how2-challenge/).
+```
+
 # How2 Dataset
 This repository contains code and meta-data to (re-)create the *How2 dataset* as described in the following paper:
 
@@ -19,9 +23,7 @@ We also acknowledge earlier work (including first-time data collection) on the s
 
  - Shoou-I Yu, Lu Jiang, and Alexander Hauptmann. Instructional Videos for Unsupervised Harvesting and Learning of Action Examples. In Proc. 22nd ACM International Conference on Multimedia; Orlando, FL; U.S.A.; 2014. ACM. http://doi.acm.org/10.1145/2647868.2654997.
 
-## How2 Challenge
 
-NEW: Please check out the [How2 Challenge Workshop at ICML 2019](https://srvk.github.io/how2-challenge/).
 
 ## How2 Download
 The corpus consists of around 80,000 instructional videos (about 2,000 hours) with associated English sub-titles and summaries. About 300 hours have also been translated into Portuguese using crowd-sourcing, and used during the [JSALT 2018 Workshop](https://www.clsp.jhu.edu/workshops/18-workshop/grounded-sequence-sequence-transduction). A larger version will be released soon.
@@ -59,3 +61,5 @@ License information for every video can be found in the `.info.json` file that i
 At the time of release, all videos included in this dataset were being made available by the original content providers under the standard [YouTube License](https://www.youtube.com/static?template=terms).
 
 Unless noted otherwise, we are providing the contents of this repository under the [Creative Commons BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) (Attribution-Share-Alike) License (for data-like content) and/ or [BSD-2-Clause License](https://opensource.org/licenses/BSD-2-Clause) (for software-type content).
+
+## How2 Evaluate
