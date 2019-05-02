@@ -1,6 +1,6 @@
-```diff
-+NEW: Please check out the [How2 Challenge Workshop at ICML 2019](https://srvk.github.io/how2-challenge/).
-```
+
+<p style='color:red'>NEW: Please check out the [How2 Challenge Workshop at ICML 2019](https://srvk.github.io/how2-challenge/).</p>
+
 
 # How2 Dataset
 This repository contains code and meta-data to (re-)create the *How2 dataset* as described in the following paper:
