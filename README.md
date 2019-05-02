@@ -51,6 +51,17 @@ We provide instructions and configuration files to reproduce three baselines on 
 ## How2 Evaluate
 We will provide instructions on how to score our three challenge tasks here.
 
+### ASR
+
+Use the following script to evaluate your ASR outputs `https://github.com/srvk/how2-dataset/blob/master/eval/asr/score.py`.
+
+This script have [sclite](http://www1.icsi.berkeley.edu/Speech/docs/sctk-1.2/sclite.html) dependencies.
+
+### Summarization
+
+### Machine Translation
+
+
 ## How2 Get Help
 Please use the `issues` ticket system (https://github.com/srvk/how2-dataset/issues) to ask questions and get clarification.
 
@@ -60,4 +71,3 @@ At the time of release, all videos included in this dataset were being made avai
 
 Unless noted otherwise, we are providing the contents of this repository under the [Creative Commons BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) (Attribution-Share-Alike) License (for data-like content) and/ or [BSD-2-Clause License](https://opensource.org/licenses/BSD-2-Clause) (for software-type content).
 
-## How2 Evaluate
