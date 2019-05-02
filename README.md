@@ -21,7 +21,7 @@ We also acknowledge earlier work (including first-time data collection) on the s
 
 ## How2 Challenge
 
-Please also check out the [How2 Challenge Workshop at ICML 2019](https://srvk.github.io/how2-challenge/).
+NEW: Please check out the [How2 Challenge Workshop at ICML 2019](https://srvk.github.io/how2-challenge/).
 
 ## How2 Download
 The corpus consists of around 80,000 instructional videos (about 2,000 hours) with associated English sub-titles and summaries. About 300 hours have also been translated into Portuguese using crowd-sourcing, and used during the [JSALT 2018 Workshop](https://www.clsp.jhu.edu/workshops/18-workshop/grounded-sequence-sequence-transduction). A larger version will be released soon.
@@ -47,6 +47,9 @@ Proceed from [here](/reproduce/300h/README.md)
 ## How2 Run
 The results in the dataset paper can be reproduced using [nmtpytorch](https://github.com/lium-lst/nmtpytorch).
 We provide instructions and configuration files to reproduce three baselines on multi-modal speech-to-text, multi-modal machine translation, and multi-modal summarization.
+
+## How2 Evaluate
+We will provide instructions on how to score our three challenge tasks here.
 
 ## How2 Get Help
 Please use the `issues` ticket system (https://github.com/srvk/how2-dataset/issues) to ask questions and get clarification.
