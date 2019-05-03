@@ -60,17 +60,16 @@ You can find a hypothesis example corresponding to the system with `18.4 WER` of
 
 To score this hyptohesis, you should execute the following command
 
-``
+```
 sclite  -r ./test/dev5.filtered.en -h ./test/hyp.filtered.word.wer.r5f045.max150.dev5.beam10.sclite -i spu_id -f 0 -o sum stdout dtl pra | grep Sum/Avg | awk '{print $11}'
-``
-
+```
 
 It should return
 
 
-``
+```
 18.4
-``
+```
 
 ### Machine Translation and Summarization
 We use the coco-metrics package for this evaluation. Download the required toolkit from the [coco-metrics](https://github.com/tylin/coco-caption). Report the BLEU scores for MT and Rouge-L scores for summarization.
