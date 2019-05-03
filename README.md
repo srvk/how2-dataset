@@ -40,7 +40,7 @@ The aforementioned form will ask for the following informations:
 - ask if you want the video features, audio features, text features, or the Portuguese translations (select one or many)
 - then it will give you instructions on how to obtain the desired data
 
-### (Option 2): Reproducible Pipeline
+### (Option 2): Reproducible pipeline
 
 Proceed from [here](/reproduce/300h/README.md)
 
