@@ -49,7 +49,7 @@ The results in the dataset paper can be reproduced using [nmtpytorch](https://gi
 We provide instructions and configuration files to reproduce three baselines on multi-modal speech-to-text, multi-modal machine translation, and multi-modal summarization.
 
 ## How2 Evaluate
-Here are instructions on how to score and submit our three challenge tasks.
+Here are instructions on how to score and submit our three challenge tasks. Report scores on the `test` set for each task.
 
 ### ASR
 
@@ -58,7 +58,7 @@ Dependencies:
 
 You can find a hypothesis example corresponding to the system with `18.4 WER` of Table 2 of [2019 Caglayan et al.](https://arxiv.org/pdf/1811.03865.pdf) in `./test/hyp.filtered.word.wer.r5f045.max150.dev5.beam10.sclite`.  
 
-To score this hyptohesis, you should execute the following command
+To score this hypothesis, you should execute the following command
 
 ```
 sclite  -r ./eval/asr/dev5.filtered.en -h ./eval/asr/hyp.filtered.word.wer.r5f045.max150.dev5.beam10.sclite -i spu_id -f 0 -o sum stdout dtl pra | grep Sum/Avg | awk '{print $11}'
@@ -72,7 +72,30 @@ It should return
 ```
 
 ### Machine Translation and Summarization
-We use the coco-metrics package for this evaluation. Download the required toolkit from the [coco-metrics](https://github.com/tylin/coco-caption). Report the BLEU scores for MT and Rouge-L scores for summarization.
+We use the nmtpy-coco-metrics package for this evaluation. Report the BLEU scores for MT and Rouge-L scores for summarization.
+
+Installation steps:
+- pip install nmtpytorch
+
+This will install all packages needed for this evaluation. You can find a demo hypothesis file from the summarization models described in Table 2 of [Libovicky et al. 2018](https://nips2018vigil.github.io/static/papers/accepted/8.pdf) in `./test/summarization.demo.test.hypothesis`.
+
+To score this hypothesis, you should execute the following command
+
+```
+nmtpy-coco-metrics ./test/summarization.demo.test.hypothesis -r ./test/summarization.demo.test.reference
+```
+
+It should return (Rouge-L)
+
+
+```
+31.2
+```
+
+
+
+
+
 
 ## How2 Get Help
 Please use the `issues` ticket system (https://github.com/srvk/how2-dataset/issues) to ask questions and get clarification. You can also [send email](mailto:how2challenge@gmail.com).
