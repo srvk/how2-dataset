@@ -24,9 +24,8 @@ We continue to explore tasks for vision and language as a workshop at ICML 2019.
 
 * * *
 
-### Very Special Thanks
-To John Hopkins University for organizing such great experience as JSALT workshop, and to the amazing team: Grounded Sequence-to-Sequence Transduction!
+### Very Special Thanks [[LINK](https://www.clsp.jhu.edu/workshops/18-workshop/grounded-sequence-sequence-transduction/)]
+To The John Hopkins University for organizing such a great experience as the JSALT workshops, and to the amazing team: Grounded Sequence-to-Sequence Transduction!
 <p align="center">
 <img src="imgs/jsalt_s2s_team.gif" alt="hi" height="300"/>
 </p>
-
