@@ -77,12 +77,12 @@ We use the nmtpy-coco-metrics package for this evaluation. Report the BLEU score
 Installation steps:
 - pip install nmtpytorch
 
-This will install all packages needed for this evaluation. You can find a demo hypothesis file from the summarization models described in Table 2 of [Libovicky et al. 2018](https://nips2018vigil.github.io/static/papers/accepted/8.pdf) in `./test/summarization.demo.test.hypothesis`.
+This will install all packages needed for this evaluation. You can find a demo hypothesis file from the summarization models described in Table 2 of [Libovicky et al. 2018](https://nips2018vigil.github.io/static/papers/accepted/8.pdf) in `./eval/summarization/demo.test.hypothesis`.
 
 To score this hypothesis, you should execute the following command
 
 ```
-nmtpy-coco-metrics ./test/summarization.demo.test.hypothesis -r ./test/summarization.demo.test.reference
+nmtpy-coco-metrics ./eval/summarization/demo.test.hypothesis -r ./eval/summarization/demo.test.reference
 ```
 
 It should return (Rouge-L)
