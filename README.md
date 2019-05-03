@@ -56,14 +56,17 @@ Here are instructions on how to score and submit our three challenge tasks.
 Dependencies:
 - [sclite](http://www1.icsi.berkeley.edu/Speech/docs/sctk-1.2/sclite.htm).
 
-You can find a hypothesis example corresponding to the system with `18.4 WER` of Table 2 [2019 Caglayan et al.](https://arxiv.org/pdf/1811.03865.pdf) in `./test/hyp.filtered.word.wer.r5f045.max150.dev5.beam10.sclite`.  
+You can find a hypothesis example corresponding to the system with `18.4 WER` of Table 2 [2019 Caglayan et al.](https://arxiv.org/pdf/1811.03865.pdf) in ./test/hyp.filtered.word.wer.r5f045.max150.dev5.beam10.sclite.  
 
-To score this hyptohesis, you should execute the following command:
+To score this hyptohesis, you should execute the following command
 
 ``
 sclite  -r ./test/dev5.filtered.en -h ./test/hyp.filtered.word.wer.r5f045.max150.dev5.beam10.sclite -i spu_id -f 0 -o sum stdout dtl pra | grep Sum/Avg | awk '{print $11}'
 ``
-It should return:
+
+
+It should return
+
 
 ``
 18.4
