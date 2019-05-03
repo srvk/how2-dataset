@@ -61,7 +61,7 @@ You can find a hypothesis example corresponding to the system with `18.4 WER` of
 To score this hyptohesis, you should execute the following command
 
 ```
-sclite  -r ./test/dev5.filtered.en -h ./test/hyp.filtered.word.wer.r5f045.max150.dev5.beam10.sclite -i spu_id -f 0 -o sum stdout dtl pra | grep Sum/Avg | awk '{print $11}'
+sclite  -r ./eval/asr/dev5.filtered.en -h ./eval/asr/hyp.filtered.word.wer.r5f045.max150.dev5.beam10.sclite -i spu_id -f 0 -o sum stdout dtl pra | grep Sum/Avg | awk '{print $11}'
 ```
 
 It should return
