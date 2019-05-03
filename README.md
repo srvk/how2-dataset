@@ -60,11 +60,8 @@ Dependencies:
 - b
 - c
 
-### Summarization
-TBA
-
-### Machine Translation
-TBA
+### Machine Translation and Summarization
+We use the coco-metrics package for this evaluation. Download the required toolkit from the [coco-metrics](https://github.com/tylin/coco-caption). Report the BLEU scores for MT and Rouge-L scores for summarization.
 
 ## How2 Get Help
 Please use the `issues` ticket system (https://github.com/srvk/how2-dataset/issues) to ask questions and get clarification. You can also [send email](mailto:how2challenge@gmail.com).
