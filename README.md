@@ -24,7 +24,7 @@ We also acknowledge earlier work (including first-time data collection) on the s
 
 
 ## How2 Download
-The corpus consists of around 80,000 instructional videos (about 2,000 hours) with associated English sub-titles and summaries. About 300 hours have also been translated into Portuguese using crowd-sourcing, and used during the [JSALT 2018 Workshop](https://www.clsp.jhu.edu/workshops/18-workshop/grounded-sequence-sequence-transduction). A larger version will be released soon.
+The corpus consists of around 80,000 instructional videos (about 2,000 hours) with associated English sub-titles and summaries. About 300 hours have also been translated into Portuguese using crowd-sourcing, and used during the [JSALT 2018 Workshop](https://www.clsp.jhu.edu/workshops/18-workshop/grounded-sequence-sequence-transduction). We are working on releasing a larger version - please let us know if you are interested.
 
 You can obtain the corpus in one of two ways:
 
@@ -32,7 +32,7 @@ You can obtain the corpus in one of two ways:
 
 You can download a pre-packaged version of all the necessary files by filling in a [form](https://docs.google.com/forms/d/e/1FAIpQLSfW2i8UnjuoH2KKSU0BvcKRbhnk_vL3HcNlM0QLsJGb_UEDVQ/viewform?usp=pp_url).
 
-To receive the Portuguese translations, please also fill in this form and request the "translation package".
+To receive the Portuguese translations, please fill in this form and request the "translation package".
 
 The aforementioned form will ask for the following informations:
 
@@ -49,25 +49,25 @@ The results in the dataset paper can be reproduced using [nmtpytorch](https://gi
 We provide instructions and configuration files to reproduce three baselines on multi-modal speech-to-text, multi-modal machine translation, and multi-modal summarization.
 
 ## How2 Evaluate
-We will provide instructions on how to score our three challenge tasks here.
+Here are instructions on how to score and submit our three challenge tasks.
 
 ### ASR
-
 Use the following [script](eval/asr/score.py) to evaluate your ASR outputs.
 
 Dependencies:
--  [sclite](http://www1.icsi.berkeley.edu/Speech/docs/sctk-1.2/sclite.htm).
+- [sclite](http://www1.icsi.berkeley.edu/Speech/docs/sctk-1.2/sclite.htm).
 - a
 - b
 - c
 
 ### Summarization
+TBA
 
 ### Machine Translation
-
+TBA
 
 ## How2 Get Help
-Please use the `issues` ticket system (https://github.com/srvk/how2-dataset/issues) to ask questions and get clarification.
+Please use the `issues` ticket system (https://github.com/srvk/how2-dataset/issues) to ask questions and get clarification. You can also [send email](mailto:how2challenge@gmail.com).
 
 ## How2 License
 License information for every video can be found in the `.info.json` file that is being downloaded for every video.
