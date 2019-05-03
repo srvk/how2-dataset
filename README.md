@@ -1,3 +1,5 @@
+## NEW: Please check out the [How2 Challenge Workshop at ICML 2019](https://srvk.github.io/how2-challenge/).
+
 # How2 Dataset
 This repository contains code and meta-data to (re-)create the *How2 dataset* as described in the following paper:
 
@@ -19,12 +21,10 @@ We also acknowledge earlier work (including first-time data collection) on the s
 
  - Shoou-I Yu, Lu Jiang, and Alexander Hauptmann. Instructional Videos for Unsupervised Harvesting and Learning of Action Examples. In Proc. 22nd ACM International Conference on Multimedia; Orlando, FL; U.S.A.; 2014. ACM. http://doi.acm.org/10.1145/2647868.2654997.
 
-## How2 Challenge
-
-Please also check out the [How2 Challenge Workshop at ICML 2019](https://srvk.github.io/how2-challenge/).
+More papers can be found in the [bibliography](Bibliography.md).
 
 ## How2 Download
-The corpus consists of around 80,000 instructional videos (about 2,000 hours) with associated English sub-titles and summaries. About 300 hours have also been translated into Portuguese using crowd-sourcing, and used during the [JSALT 2018 Workshop](https://www.clsp.jhu.edu/workshops/18-workshop/grounded-sequence-sequence-transduction). A larger version will be released soon.
+The corpus consists of around 80,000 instructional videos (about 2,000 hours) with associated English sub-titles and summaries. About 300 hours have also been translated into Portuguese using crowd-sourcing, and used during the [JSALT 2018 Workshop](https://www.clsp.jhu.edu/workshops/18-workshop/grounded-sequence-sequence-transduction). We are working on releasing a larger version - please let us know if you are interested.
 
 You can obtain the corpus in one of two ways:
 
@@ -32,7 +32,7 @@ You can obtain the corpus in one of two ways:
 
 You can download a pre-packaged version of all the necessary files by filling in a [form](https://docs.google.com/forms/d/e/1FAIpQLSfW2i8UnjuoH2KKSU0BvcKRbhnk_vL3HcNlM0QLsJGb_UEDVQ/viewform?usp=pp_url).
 
-To receive the Portuguese translations, please also fill in this form and request the "translation package".
+To receive the Portuguese translations, please fill in this form and request the "translation package".
 
 The aforementioned form will ask for the following informations:
 
@@ -40,7 +40,7 @@ The aforementioned form will ask for the following informations:
 - ask if you want the video features, audio features, text features, or the Portuguese translations (select one or many)
 - then it will give you instructions on how to obtain the desired data
 
-### (Option 2): Reproducible Pipeline
+### (Option 2): Reproducible pipeline
 
 Proceed from [here](/reproduce/300h/README.md)
 
@@ -48,11 +48,36 @@ Proceed from [here](/reproduce/300h/README.md)
 The results in the dataset paper can be reproduced using [nmtpytorch](https://github.com/lium-lst/nmtpytorch).
 We provide instructions and configuration files to reproduce three baselines on multi-modal speech-to-text, multi-modal machine translation, and multi-modal summarization.
 
+## How2 Evaluate
+Here are instructions on how to score and submit our three challenge tasks.
+
+### ASR
+
+Dependencies:
+- [sclite](http://www1.icsi.berkeley.edu/Speech/docs/sctk-1.2/sclite.htm).
+
+You can find a hypothesis example corresponding to the system with `18.4 WER` of Table 2 [2019 Caglayan et al.](https://arxiv.org/pdf/1811.03865.pdf) in `./test/hyp.filtered.word.wer.r5f045.max150.dev5.beam10.sclite`.  
+
+To score this hyptohesis, you should execute the following command:
+
+``
+sclite  -r ./test/dev5.filtered.en -h ./test/hyp.filtered.word.wer.r5f045.max150.dev5.beam10.sclite -i spu_id -f 0 -o sum stdout dtl pra | grep Sum/Avg | awk '{print $11}'
+``
+It should return:
+
+``
+18.4
+``
+
+### Machine Translation and Summarization
+We use the coco-metrics package for this evaluation. Download the required toolkit from the [coco-metrics](https://github.com/tylin/coco-caption). Report the BLEU scores for MT and Rouge-L scores for summarization.
+
 ## How2 Get Help
-Please use the `issues` ticket system (https://github.com/srvk/how2-dataset/issues) to ask questions and get clarification.
+Please use the `issues` ticket system (https://github.com/srvk/how2-dataset/issues) to ask questions and get clarification. You can also [send email](mailto:how2challenge@gmail.com).
 
 ## How2 License
 License information for every video can be found in the `.info.json` file that is being downloaded for every video.
 At the time of release, all videos included in this dataset were being made available by the original content providers under the standard [YouTube License](https://www.youtube.com/static?template=terms).
 
 Unless noted otherwise, we are providing the contents of this repository under the [Creative Commons BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) (Attribution-Share-Alike) License (for data-like content) and/ or [BSD-2-Clause License](https://opensource.org/licenses/BSD-2-Clause) (for software-type content).
+
