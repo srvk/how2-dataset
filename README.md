@@ -23,6 +23,8 @@ We also acknowledge earlier work (including first-time data collection) on the s
 
 More papers can be found in the [bibliography](Bibliography.md).
 
+To subscribe to the How2 mailing list [click here](https://lists.andrew.cmu.edu/mailman/listinfo/how-to).
+
 ## How2 Download
 The corpus consists of around 80,000 instructional videos (about 2,000 hours) with associated English sub-titles and summaries. About 300 hours have also been translated into Portuguese using crowd-sourcing, and used during the [JSALT 2018 Workshop](https://www.clsp.jhu.edu/workshops/18-workshop/grounded-sequence-sequence-transduction). We are working on releasing a larger version - please let us know if you are interested.
 
