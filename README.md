@@ -1,5 +1,5 @@
-## NEW: Please check out the [How2 Challenge Workshop at ICML 2019](https://srvk.github.io/how2-challenge/).
 ## NEW: Unsupervised Object Recognition Grounding labels for development and test set! [check here](https://docs.google.com/forms/d/e/1FAIpQLSfW2i8UnjuoH2KKSU0BvcKRbhnk_vL3HcNlM0QLsJGb_UEDVQ/viewform?usp=pp_url).
+## NEW: Please check out the [How2 Challenge Workshop at ICML 2019](https://srvk.github.io/how2-challenge/).
 
 # How2 Dataset
 This repository contains code and meta-data to (re-)create the *How2 dataset* as described in the following paper:
