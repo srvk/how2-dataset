@@ -10,13 +10,6 @@ url_base="https://www.youtube.com/watch?v="
 prefix="."
 sub_dir="${prefix}/subtitles"
 
-# Visual features
-feats_file="${prefix}/downloads/resnext101-action-avgpool-300h.tar"
-
-# Speech features
-fbank_file="${prefix}/downloads/fbank_pitch_181506.tar.bz2"
-fbank_dir="${prefix}/kaldi/fbank_pitch_181506"
-
 if [[ -z $n_jobs ]]; then
   echo "Usage: $0 <Number of parallel jobs for download>"
   exit 1
@@ -27,8 +20,8 @@ echo "Last available `curl -s http://islpc21.is.cs.cmu.edu/ramons/version`"
 
 # Check dependencies
 for util in youtube-dl parallel realpath $sha1sum; do
-  $util --version \
-    >/dev/null 2>&1 || { echo "$util not found, refer to README.md"; exit 1; }
+    $util --version >/dev/null 2>&1 || \
+    $util -v        >/dev/null 2>&1 || { echo "$util not found, refer to README.md"; exit 1; }
 done
 
 
@@ -55,33 +48,37 @@ verify_integrity() {
 # Create subtitles folder
 mkdir -p $sub_dir
 
-video_list=`mktemp`
-n_tries="0"
+video_list=`mktemp -d`/video_list
+echo $video_list
+
+n_tries=0
 while [ $n_tries -lt 5 ]; do
   n_tries=$[n_tries+1]
 
   # Construct the list of videos to download
   # This will get missing ones as well to reinitiate downloads
   diff --suppress-common-lines <(cat ${prefix}/data/*/id | cut -c-11 | sort -u) \
-    <(ls $sub_dir | sed 's#\.en\.vtt##' | sort -u) \
-    | grep '^<' | cut -d' ' -f2 > $video_list
+    <(ls $sub_dir/*.en.vtt 2>/dev/null | sed -r 's#\./subtitles/(.*)\.en\.vtt#\1#' | sort -u) \
+    | grep '^<' | awk '{print $2}' > $video_list
 
   # Get the number of outstanding downloads
-  n_remaining=`wc -l $video_list | cut -d' ' -f1`
-
-  if [ $n_remaining -gt 0 ]; then
-    echo "[Attempt #$n_tries] $n_remaining subtitles to download."
-    # Download Youtube videos on the list in parallel
-    parallel --bar -a $video_list -j $n_jobs youtube-dl ${url_base}{} --skip-download \
-      --sub-format vtt --write-sub -o "${sub_dir}/%\(id\)s.%\(ext\)s" --restrict-filename --quiet -w
-  else
+  n_remaining=`wc -l $video_list | awk '{print $1}'`
+  echo "*** # of outstanding downloads: ${n_remaining}"
+  if [ $n_remaining -eq 0 ]; then
     break
   fi
+
+  echo "[Attempt #$n_tries] $n_remaining subtitles to download."
+  # Download Youtube videos on the list in parallel
+  parallel --bar -a $video_list -j $n_jobs youtube-dl ${url_base}{} \
+    --write-description --write-info-json --write-annotations \
+    --sub-format vtt --write-sub -o "${sub_dir}/%\(id\)s.%\(ext\)s" \
+    --skip-download --restrict-filename --quiet -w
 done
 
 echo
 
-rm $video_list
+rm -rf `dirname $video_list`
 if [ $n_remaining -gt 0 ]; then
   echo "########"
   echo "# $n_remaining videos were not downloaded for some reason."
@@ -125,6 +122,17 @@ done
 
 echo
 
+#################
+# Visual features
+#################
+feats_file="${prefix}/downloads/resnext101-action-avgpool-300h.tar"
+
+#################
+# Speech features
+#################
+fbank_file="${prefix}/downloads/fbank_pitch_181506.tar.bz2"
+fbank_dir="${prefix}/kaldi/fbank_pitch_181506"
+
 ############################
 # Speech features extraction
 ############################
@@ -146,17 +154,6 @@ else
   echo "Please refer to main README.md for download instructions."
   echo "#########################################################"
 fi
-
-echo
-
-#############################
-# Visual features extraction
-#############################
-if [ -f ${feats_file} ]; then
-  echo "Found downloaded visual features file $feats_file"
-fi
-
-echo
 
 ####################
 # Alignment checks #
@@ -188,3 +185,10 @@ for split in `tr '\n' ' ' < ${prefix}/MANIFEST`; do
 
   echo "OK."
 done
+
+#############################
+# Visual features extraction
+#############################
+if [ -f ${feats_file} ]; then
+  echo "Found downloaded visual features file $feats_file"
+fi
