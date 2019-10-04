@@ -17,7 +17,7 @@ if __name__ == '__main__':
             for line in f:
                 vids.add(line.strip()[:11])
 
-        diff = vids.difference(vtts)
+        diff = sorted(list(vids.difference(vtts)))
         if len(diff) > 0:
             print('Missing {} subtitles/videos for {}:'.format(len(diff), split))
             for miss in diff:
