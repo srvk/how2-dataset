@@ -1,58 +1,97 @@
 #!/bin/bash
 
+# By default, we launch 16 parallel downloaders and we do not download
+# the raw videos.
+n_jobs=16
+dl_videos="--skip-download"
+max_tries=5
+
+##############################
+# Parse command-line arguments
+##############################
+usage() {
+  echo "Usage: $0 [-j JOBS] [-v]"
+  echo
+  echo "Argument descriptions:"
+  echo " -j JOBS : Launch JOBS processes for downloading (default: $n_jobs)"
+  echo " -v      : If given, the raw videos will be downloaded as well."
+  echo " -m MAX  : Maximum downloading attempts for missing videos/subtitles (default: $max_tries}."
+  exit 1
+}
+
+while [[ $# -gt 0 ]]; do
+  key="$1"
+
+  case $key in
+    -j|--jobs)
+      n_jobs="$2"
+      shift 2
+      ;;
+    -m|--max_tries)
+      max_tries=$2
+      shift 2
+      ;;
+    -v|--videos)
+      dl_videos=
+      shift 1
+      ;;
+    *)
+      usage
+      break
+      ;;
+  esac
+done
+
+####################
+# Check dependencies
+####################
 sha1sum="sha1sum"
 case "$OSTYPE" in
   darwin*) sha1sum="gsha1sum";;
 esac
 
-n_jobs=$1
-url_base="https://www.youtube.com/watch?v="
-prefix="."
-sub_dir="${prefix}/subtitles"
-
-if [[ -z $n_jobs ]]; then
-  echo "Usage: $0 <Number of parallel jobs for download>"
-  exit 1
-fi
-
-# Print last available version
-echo "Last available `curl -s http://islpc21.is.cs.cmu.edu/ramons/version`"
-
-# Check dependencies
 for util in youtube-dl parallel realpath $sha1sum; do
     $util --version >/dev/null 2>&1 || \
     $util -v        >/dev/null 2>&1 || { echo "$util not found, refer to README.md"; exit 1; }
 done
 
+# Print last available version
+echo "Last available `curl -s http://islpc21.is.cs.cmu.edu/ramons/version`"
+
+prefix="."
+sub_dir="${prefix}/subtitles"
+mkdir -p $sub_dir
+tmp_folder=`mktemp -d`
+echo "Temporary folder: ${tmp_folder}"
+video_list="${tmp_folder}/video_list"
+
+trap "rm -rf ${tmp_folder}" EXIT
 
 verify_integrity() {
   msg=$1
   sha1_sums=$2
+  sha_file="${tmp_folder}/${sha1_sums}.txt"
   echo
   echo "Verifying the integrity of $msg"
-  echo '#########################################'
-  pushd $prefix
-  sha_file=`mktemp`
+  pushd $prefix > /dev/null
   $sha1sum --quiet -c sha1/${sha1_sums} &> $sha_file
   if [[ $? -ne 0 ]]; then
-    echo "ERROR: Integrity check failed. Please create an issue with the $sha_file attached."
+    echo "ERROR: Integrity check failed with the following log:"
+    cat $sha_file
     exit 1
   else
     echo "Everything seems OK."
-    echo
-    rm $sha_file
   fi
-  popd
+  echo
+  popd > /dev/null
 }
 
-# Create subtitles folder
-mkdir -p $sub_dir
-
-video_list=`mktemp -d`/video_list
-echo $video_list
-
+#############################
+# Download files from YouTube
+#############################
 n_tries=0
-while [ $n_tries -lt 5 ]; do
+url_base="https://www.youtube.com/watch?v="
+while [ $n_tries -lt $max_tries ]; do
   n_tries=$[n_tries+1]
 
   # Construct the list of videos to download
@@ -63,9 +102,10 @@ while [ $n_tries -lt 5 ]; do
 
   # Get the number of outstanding downloads
   n_remaining=`wc -l $video_list | awk '{print $1}'`
-  echo "*** # of outstanding downloads: ${n_remaining}"
   if [ $n_remaining -eq 0 ]; then
     break
+  else
+    echo "# of outstanding downloads: ${n_remaining}"
   fi
 
   echo "[Attempt #$n_tries] $n_remaining subtitles to download."
@@ -73,12 +113,11 @@ while [ $n_tries -lt 5 ]; do
   parallel --bar -a $video_list -j $n_jobs youtube-dl ${url_base}{} \
     --write-description --write-info-json --write-annotations \
     --sub-format vtt --write-sub -o "${sub_dir}/%\(id\)s.%\(ext\)s" \
-    --skip-download --restrict-filename --quiet -w
+    ${dl_videos} --restrict-filename --quiet -w --no-warnings
 done
 
 echo
 
-rm -rf `dirname $video_list`
 if [ $n_remaining -gt 0 ]; then
   echo "########"
   echo "# $n_remaining videos were not downloaded for some reason."
