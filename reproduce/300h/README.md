@@ -1,4 +1,5 @@
 # Reproducible Pipeline for 300h
+**NOTE:** You still need to pass through the `Option 1` in order to download pre-extracted feature files.
 
 - Make sure you are working in a Python 3.x environment (preferably >= 3.6) and you
 are able to install additional dependencies with `pip`.
@@ -28,23 +29,20 @@ brew install coreutils parallel
   `reproduce/300h` folder:
 
 ```
-$ scripts/install.sh <# of parallel jobs for subtitle fetching>
+$ scripts/install.sh -j 16     (16 downloader processes)
+$ scripts/install.sh -j 16 -v  (will also download the raw videos)
 ```
 
 If you encounter any errors regarding the download of the subtitle files, please
 try to upgrade `youtube-dl` to an even more recent version before reporting the issue.
 
-**NOTE:** You still need to pass through the `Option 1` in order to download pre-extracted feature files.
-
-## Fetching videos
-
-If you also want to download the video files, modify `scripts/install.sh` and
-remove the `--skip-download` argument given to `youtube-dl`.
-
 ## Issues as of October 2019
 
-Unfortunately, some of the video files are removed from Youtube, which avoids downloading their subtitle files. This is the current list that you should be seeing once you launch the script:
+Unfortunately, some of the video files are removed from Youtube, which avoids downloading their subtitle files.
+We are working on a solution for this issue. For the training videos, you can simply omit them
+manually by filtering out the segment IDs starting with these videos.
 
+This is the current missing video list:
 ```
 Missing 20 subtitles/videos for train:
   1l6MC-9BQa0
