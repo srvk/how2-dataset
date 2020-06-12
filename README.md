@@ -49,8 +49,9 @@ The aforementioned form will ask for the following informations:
 Proceed from [here](/reproduce/300h/README.md)
 
 ## How2 Run
-The results in the dataset paper can be reproduced using [nmtpytorch](https://github.com/lium-lst/nmtpytorch).
-We provide instructions and configuration files to reproduce three baselines on multi-modal speech-to-text, multi-modal machine translation, and multi-modal summarization.
+ - The results in the dataset paper can be reproduced using a custom version of [nmtpytorch](https://github.com/lium-lst/nmtpytorch) that is provided under `baselines/code`.
+ - Configuration files for speech recognition, speech translation, and machine translation; along with their visual adaptation
+   counterparts are provided under `baselines/configs`.
 
 ## How2 Evaluate
 Here are instructions on how to score and submit our three challenge tasks. Report scores on the `test` set for each task.
