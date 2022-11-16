@@ -1,3 +1,12 @@
+## November 16th Update
+
+## NEW: How2 has been used for end to end speech summarization- we are releasing 43 dim fbank+pitch features to support this. See our [ESPNet Recipe](https://github.com/espnet/espnet/tree/master/egs2/how2_2000h/sum1) and [paper](https://ieeexplore.ieee.org/document/9747320). Please fill the form to request this data. 
+
+
+
+
+
+
 ## NEW: How2 will be part of the [IWSLT 2019 speech to text evaluation](https://sites.google.com/view/iwslt-evaluation-2019/speech-translation).
 ## NEW: Unsupervised Object Recognition Grounding labels for development and test set! [check here](https://docs.google.com/forms/d/e/1FAIpQLSfW2i8UnjuoH2KKSU0BvcKRbhnk_vL3HcNlM0QLsJGb_UEDVQ/viewform?usp=pp_url).
 ## NEW: Please check out the [How2 Challenge Workshop at ICML 2019](https://srvk.github.io/how2-challenge/).
