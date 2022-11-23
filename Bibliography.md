@@ -2,6 +2,7 @@
 
 Here is a reverse chronological list of papers using the How2 dataset. Please submit your work by [sending email](mailto:how2challenge@gmail.com), and we will add it to the list.
 
+- R. Sharma, S. Palaskar, A. W. Black and F. Metze, "End-to-End Speech Summarization Using Restricted Self-Attention," ICASSP 2022 - 2022 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2022, pp. 8072-8076, doi: 10.1109/ICASSP43922.2022.9747320.
 - Nils Holzenberger, Shruti Palaskar, Pranava Madhyastha, Florian Metze, and Raman Arora. Learning from multiview correlations in open-domain videos. In Proc. ICASSP. IEEE, May 2019. arXiv:arXiv: 1811.08890.
 - Ozan Çaglayan, Ramon Sanabria, Shruti Palaskar, Loïc Barrault, and Florian Metze. Multimodal grounding for sequence-to-sequence speech recognition. In Proc. ICASSP, Brighton, UK, May 2019. IEEE. arXiv: arXiv:1811.03865.
 - Ramon Sanabria, Shruti Palaskar, and Florian Metze. CMU Sinbad's submission for the DSTC7 AVSD challenge. In Proc. 7th Dialog State Tracking Challenge Workshop, Honolulu, HI; U.S.A., January 2019.
