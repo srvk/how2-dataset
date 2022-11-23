@@ -5,7 +5,7 @@ How-2 is a multimodal dataset which consists of around 80,000 instructional vide
 We currently have released the following packages pertaining to the How-2 data to be able to replicate our results and encourage further research:
 
 - ASR (300h): This release contains (audio) fbank+pitch features in Kaldi scp/ark format for 300 hours
-- E2E Summ + ASR (2000h): This release contains (audio_2000) fbank+pitch features in Kaldi scp/ark format, along with transcript and abstractive summaries for 2000 hours
+- E2E Summarization + ASR (2000h): This release contains (audio_2000) fbank+pitch features in Kaldi scp/ark format, along with transcript and abstractive summaries for 2000 hours
 - Visual features: This release contains (video) Action features in numpy arrays for MT and ASR
 - English Transcript: This release contains (en) English text for How2
 - Portuguese Machine Translations: This release contains (pt) Portuguese crowdsource text
