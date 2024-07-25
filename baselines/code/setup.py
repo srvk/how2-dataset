@@ -41,7 +41,7 @@ setup(
     keywords='nmt neural-mt translation deep-learning pytorch captioning',
     install_requires=[
         'numpy', 'scipy', 'scikit-learn', 'tqdm', 'pillow',
-        'torch==0.3.1', 'torchvision==0.2.1',
+        'torch==2.2.0', 'torchvision==0.2.1',
         'sacrebleu>=1.2.9', 'tensorboardX==1.1',
         'editdistance==0.4', 'ipdb',
     ],
