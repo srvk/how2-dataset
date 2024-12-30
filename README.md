@@ -1,8 +1,7 @@
 
 # **IMPORTANT NOTICE**
 
-# **We experienced issues with the data distribution. We are working to resolve it — apologies for the inconvenience.**
-
+It appears that most of the original data files (videos) have been removed from Youtube and therefore running the download scripts no longer produces a useful copy of the corpus. Unfortunately we cannot redistribute the data directly and the team has since moved on. If you want to use the corpus in your own research, your best bet is to get in touch with a group that has a copy of the corpus and see if you can share that. Thank you! 
 
 ## The How-2 Dataset 
 
